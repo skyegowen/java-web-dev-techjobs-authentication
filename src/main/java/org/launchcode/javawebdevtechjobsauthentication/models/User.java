@@ -29,7 +29,7 @@ public class User extends AbstractEntity {
         this.pwHash = encoder.encode(password);
     }
 
-    private boolean isMatchingPassword(String password) {
+    public boolean isMatchingPassword(String password) {
         return encoder.matches(password, pwHash);
     }
 
