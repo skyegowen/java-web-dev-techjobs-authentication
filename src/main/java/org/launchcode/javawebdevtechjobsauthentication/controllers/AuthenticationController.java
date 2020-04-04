@@ -26,7 +26,7 @@ public class AuthenticationController {
 
     private static final String userSessionKey = "user";
 
-    public User getUserFormSession(HttpSession session) {
+    public User getUserFromSession(HttpSession session) {
         Integer userId = (Integer) session.getAttribute(userSessionKey);
         if (userId == null) {
             return null;
